@@ -44,12 +44,10 @@ git branch - wyświetla listę gałęzi w repozytorium. Aby zobaczyć wszystkie 
 ```
 git branch
 ```
-git clone - tworzy lokalną kopię zdalnego repozytorium. Aby sklonować repozytorium, używa się polecenia:
-```git clone https://adres_repozytorium.git
+git config - pozwala na konfigurację ustawień Git, takich jak nazwa użytkownika i adres e-mail. Aby ustawić nazwę użytkownika, używa się polecenia:
 ```
-git remote - zarządza zdalnymi repozytoriami. Aby dodać nowe zdalne repozytorium, używa się polecenia:
-```git remote add nazwa_remote https://adres_repozytorium.git
+git config --global user.name "Twoje Imię"
 ```
-git fetch - pobiera zmiany z zdalnego repozytorium, ale nie scala ich automatycznie z lokalnym repozytorium. Aby pobrać zmiany, używa się polecenia:
-```git fetch origin
+Aby ustawić adres e-mail, używa się polecenia:
 ```
+git config --global user.email "
