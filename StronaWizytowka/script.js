@@ -11,7 +11,7 @@ const umiejetnosci = [
 
 function pokazUmiejetnosci(lista) {
     const konterner = document.querySelector("#lista-umiejetnosci");
-    for (const nazwa of lista){
+    for (const nazwa of lista) {
         const element = document.createElement("li");
         element.textContent = nazwa;
         konterner.appendChild(element);
@@ -27,13 +27,15 @@ function pokazKomunikat(tresc, rodzaj) {
     komunikat.classList.remove("blad", "sukces");
     komunikat.classList.add(rodzaj);
 }
-formularz. addEventListener (" submit", function (event) {
+
+formularz.addEventListener("submit", function (event) {
     event.preventDefault();
     const imie = document.querySelector("#imie").value.trim();
     const email = document.querySelector("#email").value.trim();
-    const temat = document.querySelector("#temat"). value;
+    const temat = document.querySelector("#temat").value;
     const tresc = document.querySelector("#tresc").value.trim();
-    if (imie ==="") {
+
+    if (imie === "") {
         pokazKomunikat("Podaj imię.", "blad");
         return;
     }
@@ -45,15 +47,28 @@ formularz. addEventListener (" submit", function (event) {
         pokazKomunikat("Wybierz temat wiadomości.", "blad");
         return;
     }
+
     pokazKomunikat(
-        "Dziękuję, " + imie + ". Wiadomość na temat „" + temat + "'*costała przyjęta.", 'sukces'
+        "Dziękuję, " + imie + ". Wiadomość na temat „" + temat + "” została przyjęta.",
+        "sukces"
     );
     console.log("Dane z formularza:", {
         imie: imie,
         email: email,
         temat: temat,
         tresc: tresc
-    }
-);
+    });
     formularz.reset();
+});
+
+const przycisk = document.querySelector("#toggle-theme");
+
+przycisk.addEventListener("click", function () {
+    const jestCiemny = document.body.classList.toggle("ciemny");
+
+    if (jestCiemny) {
+        przycisk.textContent = "Jasny motyw";
+    } else {
+        przycisk.textContent = "Ciemny motyw";
+    }
 });
