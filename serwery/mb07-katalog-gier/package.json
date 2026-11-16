@@ -1,5 +1,5 @@
 {
-  "name": "mb06-katalog-gier",
+  "name": "mb07-katalog-gier",
   "version": "1.0.0",
   "description": "Serwer katalogu gier planszowych",
   "main": "serwer.js",
