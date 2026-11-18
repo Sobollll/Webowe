@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(import.meta.dirname, "public")));
 
+/** Podłączenie routera dla zasobu gier (/gry). */
 app.use("/gry", routerGier);
 
 /** GET /szukaj?wydawca=&max=&gracze= — filtrowanie katalogu; brak parametrów = cała lista. */
