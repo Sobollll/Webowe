@@ -1,13 +1,13 @@
-*{
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    margin: 0 auto;
+body {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: linear-gradient(to right, red, blue);
+  background-size: cover;
 }
-body{
-    background-image: linear-gradient(to right, red , blue);
-    background-size: cover;
-}
-h1{
+
+h1 {
   color: #000000;
   font-size: 2em;
   text-align: center;
